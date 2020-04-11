@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+{% set classes = [
+  'node',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  node.bundle|clean_class,
+  node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+] %}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% block content %}
+    <div class="row content-block">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        {% if content.field_foto_location.0 %}
+          {{ content.field_foto_location }}
+        {% endif %}
+        <div class="foto-details">
+          <div class="foto-decription">
+            {% if content.field_foto_description.0 %}
+              {{ content.field_foto_description }}
+            {% endif %}
+          </div>
+          <div class="foto-date">
+            {% if content.field_date_foto.0 %}
+              {{ content.field_date_foto }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+</article>

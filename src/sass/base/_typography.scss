@@ -1,0 +1,76 @@
+body {
+  font-size: 16px;
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 200;
+  line-height: 2em;
+  font-family: $secondary-font;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 2em;
+
+}
+.views-field-title {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+h4 {
+  font-size: 25px;
+  line-height: 2em;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.decoration {
+  &:after {
+    content: " ";
+    position: relative;
+    top: -5px;
+    left: 50%;
+    margin-left: -20px;
+    display: block;
+    width: 40px;
+    height: 1px;
+    border-bottom: 2px solid $main-color;
+  }
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.1rem 0.3rem;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

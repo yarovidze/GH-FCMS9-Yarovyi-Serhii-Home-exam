@@ -1,0 +1,76 @@
+.btn-transparent {
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  font-family: $main-font;
+  color: $light-color;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px 40px;
+  outline: none;
+  border-radius: 27px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $light-color;
+  border-image: initial;
+  &:hover {
+    border-color: $main-color;
+    background-color: $main-color;
+  }
+}
+.btn-main {
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  font-family: $main-font;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: $main-color;
+  color: $light-color;
+  padding: 10px 40px;
+  outline: none;
+  border-radius: 27px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $main-color;
+  border-image: initial;
+  &:hover {
+    border-color: $main-color;
+    opacity: 0.8;
+  }
+}
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  -ms-touch-action: none;
+  touch-action: none;
+  color: $main-color;
+}
+.btn-primary {
+  background-color: $main-color;
+  color: $light-color;
+  border-color: transparent;
+  border-radius: 0;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  &:hover {
+    opacity: 0.8;
+    transition: 1s;
+    background-color: $main-color;
+    border-color: transparent;
+  }
+}
+.page-item.disabled .page-link {
+  color: $light-color;
+  pointer-events: none;
+  cursor: auto;
+  background-color: $major-color;
+  border-color: #dee2e6;
+  border-radius: 0;
+}
+

@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page">
+    {% embed '@radix/navbar/navbar.twig' with {
+        placement: 'sticky-top-custom',
+        container: 'fixed',
+        color: 'light',
+        utility_classes: ['bg-white-custom'],
+    } %}
+
+        {% block branding %}
+            {% if page.navbar_branding %}
+                {{ page.navbar_branding }}
+            {% endif %}
+        {% endblock %}
+
+        {% block left %}
+            {% if page.navbar_left %}
+                <div class="mr-auto">
+                    {{ page.navbar_left }}
+                </div>
+            {% endif %}
+        {% endblock %}
+
+        {% block right %}
+            {% if page.navbar_right %}
+                {{ page.navbar_right }}
+            {% endif %}
+        {% endblock %}
+    {% endembed %}
+
+    <main>
+        <section class="map-section">
+
+                {% block map %}
+                    <div class="row no-gutters">
+                    <div class="col-12">
+                        <div class="main-map">
+                        {% if page.map %}
+                        {{ page.map }}
+                    {% endif %}
+                    </div>
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-12 col-md-3 col-lg-2">
+                        {% if page.map_right %}
+                            {{ page.map_right }}
+                        {% endif %}
+                    </div>
+                    </div>
+                {% endblock %}
+
+        </section>
+
+        {% if page.content %}
+            <div class="page__content">
+                <div class="container">
+                    {{ page.content }}
+                </div>
+            </div>
+        {% endif %}
+    </main>
+
+    {% if page.footer %}
+        <footer class="page__footer">
+            <div class="container">
+                <div class="d-flex justify-content-md-between align-items-md-center">
+                    {{ page.footer }}
+                </div>
+            </div>
+        </footer>
+    {% endif %}
+</div>

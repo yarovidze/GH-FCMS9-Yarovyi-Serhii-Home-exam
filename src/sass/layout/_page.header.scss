@@ -1,0 +1,53 @@
+// Page: Header
+// -----------------------------------------------------------------------------
+.hero-section {
+  color: $light-color;
+  & .hero-description {
+    padding-top: 50px;
+    h1 {
+      font-size: 50px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+}
+.sticky-top-custom {
+  position: relative;
+  top: 0;
+  z-index: 1020;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: $light-color !important;
+  text-transform: uppercase;
+  font-weight: 300;
+  &.is-active {
+    color: $major-color !important;
+  }
+  &:hover {
+    color: #ff4848 !important;
+  }
+}
+.bg-white-custom {
+  background-color: $dark-color;
+}
+.mr-auto {
+  margin-top: 5px;
+  border-bottom: 2px solid $main-color;
+  width: 100%;
+}
+.navbar {
+  padding: 0.1rem 1rem;
+}
+
+
+@media (max-width: 992px) {
+  .social-link-field {
+    margin: 5px 0;
+  }
+}

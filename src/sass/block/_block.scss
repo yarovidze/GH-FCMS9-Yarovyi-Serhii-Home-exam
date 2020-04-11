@@ -1,0 +1,60 @@
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & a {
+    color: grey;
+    &:hover {
+      color: red;
+    }
+  }
+}
+.ui-widget-content {
+  border: none !important;
+  padding: 0;
+  border-radius: 0;
+
+}
+.ui-dialog {
+  & .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative;
+    color: $light-color;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: $main-color;
+    border: none;
+    border-radius: 0;
+  }
+  & .form-control {
+    border: none;
+    font-style: italic;
+    border-bottom: 2px solid $main-color;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 300;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  & .ui-dialog-titlebar-close {
+    position: absolute;
+    right: .3em;
+    top: 50%;
+    width: 20px;
+    margin: -10px 0 0 0;
+    padding: 1px;
+    height: 20px;
+    border-radius: 0;
+    background: white;
+    outline: none;
+  }
+}
+.ui-widget-overlay {
+  background: #000000;
+  opacity: .3;
+  filter: Alpha(Opacity=30);
+}
+.webform-confirmation-modal {
+  width: 320px !important;
+}
